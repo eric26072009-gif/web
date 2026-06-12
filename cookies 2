@@ -1,0 +1,16 @@
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;width:100%;background:#222;color:white;padding:15px;text-align:center;">
+  Aquesta web utilitza cookies.
+  <button onclick="acceptarCookies()">Acceptar</button>
+</div>
+
+<script>
+if (!document.cookie.includes("cookie_consent=")) {
+  document.getElementById("cookie-banner").style.display = "block";
+}
+
+function acceptarCookies() {
+  document.cookie =
+    "cookie_consent=acceptades; max-age=31536000; path=/";
+  document.getElementById("cookie-banner").style.display = "none";
+}
+</script>
