@@ -1,0 +1,17 @@
+<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:white;padding:15px;text-align:center;">
+  Aquesta web utilitza cookies.
+  <button onclick="acceptarCookies()">Acceptar</button>
+  <button onclick="rebutjarCookies()">Rebutjar</button>
+</div>
+
+<script>
+function acceptarCookies() {
+  document.cookie = "cookie_consent=acceptades; max-age=31536000; path=/; SameSite=Lax";
+  document.getElementById("cookie-banner").style.display = "none";
+}
+
+function rebutjarCookies() {
+  document.cookie = "cookie_consent=rebutjades; max-age=31536000; path=/; SameSite=Lax";
+  document.getElementById("cookie-banner").style.display = "none";
+}
+</script>
